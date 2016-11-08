@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BaseDatos</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="et1">Número de Empleo: </string>
+    <string name="ct1">Ingresa el dato:</string>
+    <string name="et2">Sucursal: </string>
+    <string name="ct2">Ingresa el dato:</string>
+    <string name="bt1">Alta</string>
+    <string name="bt2">Consulta por N°. Empleado</string>
+    <string name="bt3">Baja</string>
+    <string name="bt4">Modificación</string>
+
+</resources>

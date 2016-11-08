@@ -1,0 +1,65 @@
+package com.alejandro.basedatos;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
+import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+	
+	private EditText et1, et2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        et1 = (EditText)findViewById(R.id.editText1);
+        et2 = (EditText)findViewById(R.id.editText2);
+        
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+    public void alta(View v){
+    	
+    	AdminSQLite admin = new AdminSQLite(this, "administracion", null, 1);
+    	SQLiteDatabase db = admin.getWritableDatabase();
+    	String n_empleado = et1.getText().toString();
+    	String nombre = et2.getText().toString();
+    	
+    	ContentValues registro = new ContentValues();
+    	registro.put("n_empleado", n_empleado);
+    	registro.put("nombre", nombre);
+    	
+    	db.insert("empleados", null, registro);
+    	db.close();
+    	
+    	et1.setText("");
+    	et2.setText("");
+    	
+    	Toast.makeText(this, "Se cargaron los datos del empleado", Toast.LENGTH_SHORT).show();
+    	
+    }
+    
+    public void consulta(View v){
+    	
+    }
+    
+    public void baja(View v){
+    	
+    }
+    
+    public void modificacion(View v){
+    	
+    }
+}
