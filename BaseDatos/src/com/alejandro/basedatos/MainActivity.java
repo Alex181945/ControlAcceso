@@ -3,6 +3,7 @@ package com.alejandro.basedatos;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
 import android.view.View;
@@ -53,13 +54,58 @@ public class MainActivity extends Activity {
     
     public void consulta(View v){
     	
+    	AdminSQLite admin = new AdminSQLite(this, "administracion", null, 1);
+    	SQLiteDatabase db = admin.getWritableDatabase();
+    	String n_empleado = et1.getText().toString();
+    	
+    	Cursor fila = db.rawQuery("SELECT nombre FROM empleados WHERE n_empleado = " + n_empleado, null);
+    	
+    	if(fila.moveToFirst()){
+    		et2.setText(fila.getString(0));
+    	}else{
+    		Toast.makeText(this, "El empleado no esta registrado", Toast.LENGTH_SHORT).show();
+    	}
+    	
+    	db.close();
     }
     
     public void baja(View v){
     	
+    	AdminSQLite admin = new AdminSQLite(this, "administracion", null, 1);
+    	SQLiteDatabase db = admin.getWritableDatabase();
+    	String n_empleado = et1.getText().toString();
+    	
+    	int cant = db.delete("empleados", "n_empleado = " + n_empleado, null);
+    	
+    	db.close();
+    	et1.setText("");
+    	et2.setText("");
+    	
+    	if(cant == 1){
+    		Toast.makeText(this, "Se borro al empleado", Toast.LENGTH_SHORT).show();
+    	}else{
+    		Toast.makeText(this, "El empleado no esta registrado", Toast.LENGTH_SHORT).show();
+    	}
+    	
     }
     
     public void modificacion(View v){
+    	
+    	AdminSQLite admin = new AdminSQLite(this, "administracion", null, 1);
+    	SQLiteDatabase db = admin.getWritableDatabase();
+    	String n_empleado = et1.getText().toString();
+    	String nombre = et2.getText().toString();
+    	
+    	ContentValues registro = new ContentValues();
+    	registro.put("nombre", nombre);
+    	
+    	int cant = db.update("empleados", registro, "n_empleado = "+n_empleado, null);
+    	
+    	if(cant == 1){
+    		Toast.makeText(this, "Se modificaron los datos", Toast.LENGTH_SHORT).show();
+    	}else{
+    		Toast.makeText(this, "El empleado no esta registrado", Toast.LENGTH_SHORT).show();
+    	}
     	
     }
 }
