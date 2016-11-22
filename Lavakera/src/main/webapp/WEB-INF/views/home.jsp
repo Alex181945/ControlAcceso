@@ -1,14 +1,16 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<title>Home</title>
+	<meta charset="UTF-8">
+	<title>Lavakera</title>
+	<link type="text/css" rel="stylesheet" href="/resources/css/lib/bootstrap.min.css"/>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
-
-<P>  The time on the server is ${serverTime}. </P>
+	
+	
+	<!-- Script -->
+	<script type="text/javascript" src="/resources/js/lib/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/bootstrap.min.js"></script>
+	
 </body>
 </html>
