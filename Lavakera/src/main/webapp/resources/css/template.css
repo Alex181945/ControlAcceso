@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+/*Seccion del buscador*/
+
+.buscador .busCaja {
+	width: 100%;
+	margin-top: 15%;
+	border-radius: 10px;
+	background-color: #fafafa;
+}
+
+.buscador .btnEnviar{
+	width: 4%;
+	
+}
+
+/*Fin Seccion del buscador*/
