@@ -6,6 +6,7 @@
 	<title>Lavakera</title>
 	<link href="resources/image/vakera.ico" rel="shortcut icon" type="image/x-icon"/>
 	<link type="text/css" rel="stylesheet" href="resources/css/lib/bootstrap.min.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="resources/css/template.css"/>
 </head>
 <body>
@@ -31,22 +32,21 @@
 				</div>
 			</div>
 			
-			
 			<div class=row>
 				<div class="col-sm-12" style="background-color: #8c2300">
 					<nav>
-						<ul class="nav nav-pills">
-							<li class="col-sm-1"><a title="Inicio" href="#"></a>Inicio</li>
-							<li class="col-sm-1 col-sm-offset-1"><a title="Nosotros" href="#"></a>Nosotros</li>
-							<li class="col-sm-1 col-sm-offset-1"><a title="Productos" href="#"></a>Productos</li>
-							<li class="col-sm-1 col-sm-offset-1"><a title="Sucursales" href="#"></a>Sucursales</li>
-							<li class="col-sm-1 col-sm-offset-1"><a title="Contacto" href="#"></a>Contacto</li>
-							<li class="col-sm-1 col-sm-offset-1"><a title="Factutración" href="#"></a>Factutración</li>
+						<ul id="menu">
+							<li class="col-sm-1"><a title="Inicio" href="http://lavakera.com/">Inicio</a></li>
+							<li class="col-sm-1 col-sm-offset-1"><a title="Nosotros" href="#">Nosotros</a></li>
+							<li class="col-sm-1 col-sm-offset-1"><a title="Productos" href="#">Productos</a></li>
+							<li class="col-sm-1 col-sm-offset-1"><a title="Sucursales" href="#">Sucursales</a></li>
+							<li class="col-sm-1 col-sm-offset-1"><a title="Contacto" href="#">Contacto</a></li>
+							<li class="col-sm-1 col-sm-offset-1"><a title="Factutración" href="#">Factutración</a></li>
 						</ul>
 					</nav>
 				</div>				
-			</div>				
-			
+			</div>
+						
 		</div>
 		<div class="contenido">
 			<div></div>

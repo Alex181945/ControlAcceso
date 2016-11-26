@@ -1,5 +1,9 @@
 @CHARSET "ISO-8859-1";
 
+body{
+	font-family: 'Lora', serif;
+}
+
 /*Seccion del buscador*/
 
 .buscador .busCaja {
@@ -14,3 +18,19 @@
 }
 
 /*Fin Seccion del buscador*/
+
+/*Seccion de menu*/
+
+nav ul li{
+	margin: 0;
+    padding: 0;
+	list-style: none;
+}
+
+nav ul li a{
+	color: white;
+	font-size: 14px;
+	text-align: center;
+}
+
+/*Fin Seccion de menu*/
