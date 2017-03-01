@@ -1,0 +1,20 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-image: url("../image/background/background_oasis.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Lora', serif;
+}
+
+.titulo h1{
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
+	color: #ffffff;
+	text-align: right;
+	
+}
+
+.mensaje{
+	text-align: right;
+}
